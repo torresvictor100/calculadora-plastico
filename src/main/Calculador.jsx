@@ -33,7 +33,9 @@ export default class Calculator extends Component {
             const total = valorMil * this.state.milheiro[0]
             const unidade = valorMil/1000
 
-            this.state.displayValue[0] = "T:" + parseFloat(total.toFixed(2)) + " M:"+ parseFloat(valorMil.toFixed(2)) + " U:" + parseFloat(unidade.toFixed(2)) 
+            this.state.displayValue[0] = "T:" + parseFloat(total.toFixed(2)) + 
+                                        "  M: "+ parseFloat(valorMil.toFixed(2)) + 
+                                        " U:" + parseFloat(unidade.toFixed(2)) 
             this.state.displayValue[1] = true
         }else{
             const valorMil = ((this.state.largura[0] * this.state.altura[0]*this.state.espesura[0] * this.state.fator[0])/10) + (this.state.ads[0]/2)
@@ -42,7 +44,7 @@ export default class Calculator extends Component {
 
 
 
-            this.state.displayValue[0] = "T: " + parseFloat(total.toFixed(2)) + " M: "+ parseFloat(valorMil.toFixed(2)) + " U: " + parseFloat(unidade.toFixed(2)) 
+            this.state.displayValue[0] = "To:" + parseFloat(total.toFixed(2))+" Mil:"+ parseFloat(valorMil.toFixed(2)) + " Un:" + parseFloat(unidade.toFixed(2)) 
             this.state.displayValue[1] = true
         }
 
@@ -87,8 +89,6 @@ export default class Calculator extends Component {
         }
 
 
-
-        console.log(this.state)
         this.state.displayValue[0] = '0'
         this.current = ''
         this.setState({ clearDisplay: false })
