@@ -11,14 +11,13 @@ ReactDOM.render(
         <Calculator />
       </div>
       <div className='instrusao'>
-        <p>
           <h1>esp = espessura</h1>
-          <h1>mil = milheiros</h1>
+          <h1>mil ou M = milheiros</h1>
           <h1>ads = adesivo</h1>
           <h1>lar = largura</h1>
           <h1>alt = altura</h1>
           <h1>far = fator</h1>
-        </p>
+          <h1>T: total, U: unidade</h1>
       </div>
     </div>
 

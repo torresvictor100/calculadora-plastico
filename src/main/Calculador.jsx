@@ -33,20 +33,19 @@ export default class Calculator extends Component {
             const total = valorMil * this.state.milheiro[0]
             const unidade = valorMil/1000
 
-            this.state.displayValue[0] = "total:" + parseFloat(total.toFixed(2)) + " mileiro:"+ parseFloat(valorMil.toFixed(2)) + " unidade:" + parseFloat(unidade.toFixed(2)) 
+            this.state.displayValue[0] = "T:" + parseFloat(total.toFixed(2)) + " M:"+ parseFloat(valorMil.toFixed(2)) + " U:" + parseFloat(unidade.toFixed(2)) 
             this.state.displayValue[1] = true
         }else{
-            const valorMil = ((this.state.largura[0] * this.state.altura[0]*this.state.espesura[0] * this.state.fator[0])/10) * (this.state.ads[0]/2)
+            const valorMil = ((this.state.largura[0] * this.state.altura[0]*this.state.espesura[0] * this.state.fator[0])/10) + (this.state.ads[0]/2)
             const total = valorMil * this.state.milheiro[0]
             const unidade = total/this.state.milheiro[0]/1000
 
 
 
-            this.state.displayValue[0] = "total:" + parseFloat(total.toFixed(2)) + " mileiro:"+ parseFloat(valorMil.toFixed(2)) + " unidade:" + parseFloat(unidade.toFixed(2)) 
+            this.state.displayValue[0] = "T: " + parseFloat(total.toFixed(2)) + " M: "+ parseFloat(valorMil.toFixed(2)) + " U: " + parseFloat(unidade.toFixed(2)) 
             this.state.displayValue[1] = true
         }
 
-        console.log("tão me chamando")
         this.setState({ clearDisplay: false })
 
     }
@@ -54,7 +53,7 @@ export default class Calculator extends Component {
     clearMemory() {
 
         this.setState({ ...initialState })
-        this.state.displayValue[0] = ''
+        this.state.displayValue[0] = '0'
         this.current = ''
         this.state.espesura[1] = false
         this.state.milheiro[1] = false
@@ -90,7 +89,7 @@ export default class Calculator extends Component {
 
 
         console.log(this.state)
-        this.state.displayValue[0] = ''
+        this.state.displayValue[0] = '0'
         this.current = ''
         this.setState({ clearDisplay: false })
 
@@ -101,11 +100,11 @@ export default class Calculator extends Component {
         if (n === '.' && this.state.displayValue.includes('.')) {
             return
         }
-
+        
         const clearDisplay = this.state.displayValue[0] === '0'
             || this.state.clearDisplay
-        const currentValue = clearDisplay ? '' : this.state.displayValue[0]
-
+        const currentValue = clearDisplay ? n==='.'?'0': '' : this.state.displayValue[0]
+        
         this.setState({ clearDisplay: false })
         this.state.current = currentValue + n
         this.state.displayValue[0] = currentValue + n
