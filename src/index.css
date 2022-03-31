@@ -5,6 +5,22 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-color: rgb(184, 197, 195);
+  
+
+}
+
+.instrusao{
+  margin-left: 35px;
+}
+
+.container{
+  margin-top: 75px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 code {

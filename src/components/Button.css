@@ -29,6 +29,17 @@
     color: #FFF;
 }
 
+
+.button.operationUsed{
+    background-color: #f16000;
+    color: #FFF;
+}
+.button.operationUsed:active{
+    background-color: #f57927;
+    color: #FFF;
+}
+
 .button.operation:active{
     background-color: #fa8231cc;
 }
+

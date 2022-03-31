@@ -6,6 +6,8 @@ export default props => {
     classes += props.operation ? 'operation' : ''
     classes += props.double ? 'double' : ''
     classes += props.triple ? 'triple' : ''
+
+    classes += props.used ?'Used': ''
     
     return (
         <button 

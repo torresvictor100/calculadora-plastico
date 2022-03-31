@@ -1,12 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import Calculator from './main/Calculador'
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <div className='container' >
+      <div>
+        <Calculator />
+      </div>
+      <div className='instrusao'>
+        <p>
+          <h1>esp = espessura</h1>
+          <h1>mil = milheiros</h1>
+          <h1>ads = adesivo</h1>
+          <h1>lar = largura</h1>
+          <h1>alt = altura</h1>
+          <h1>far = fator</h1>
+        </p>
+      </div>
+    </div>
+
   </React.StrictMode>,
   document.getElementById('root')
 );
