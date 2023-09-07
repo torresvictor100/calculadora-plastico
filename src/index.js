@@ -6,20 +6,9 @@ import Calculator from './main/Calculador'
 
 ReactDOM.render(
   <React.StrictMode>
-    <div className='container' >
-      <div>
-        <Calculator />
-      </div>
-      <div className='instrusao'>
-          <h1>esp = espessura</h1>
-          <h1>mil = milheiros</h1>
-          <h1>ads = adesivo</h1>
-          <h1>lar = largura</h1>
-          <h1>alt = altura</h1>
-          <h1>far = fator</h1>
-          <h1>To: total, Un: unidade</h1>
-      </div>
-    </div>
+  <div className='container' >
+      <Calculator />
+  </div>
 
   </React.StrictMode>,
   document.getElementById('root')
